@@ -1,0 +1,42 @@
+#Proyectos {
+  margin-bottom: 4rem;
+}
+
+.projects-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0;
+    color: var(--secondary);
+  }
+}
+
+.projects-desc-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  p {
+    width: 80%;
+  }
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

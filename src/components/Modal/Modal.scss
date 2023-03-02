@@ -1,0 +1,24 @@
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  position: fixed;
+  background-color: var(--white);
+  box-shadow: 0 0 50px 10px rgba(160, 160, 160, 0.5);
+  border-radius: var(--radius);
+  padding: 1rem 2rem;
+  top: 15%;
+  z-index: 4;
+}
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  h4 {
+    margin: 0;
+  }
+}

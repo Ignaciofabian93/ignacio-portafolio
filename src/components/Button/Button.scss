@@ -1,0 +1,25 @@
+button {
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+  transition: var(--transition);
+  border: 1px solid var(--primary);
+}
+
+.secondary {
+  border: 1px solid var(--primary);
+  background-color: var(--white);
+  color: var(--primary);
+}

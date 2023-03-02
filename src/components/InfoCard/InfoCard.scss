@@ -1,0 +1,27 @@
+.about-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-card-title {
+  color: var(--secondary);
+}
+
+.about-card {
+  height: 350px;
+  width: 260px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 1rem;
+
+  div {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--secondary);
+    margin: 0;
+  }
+}
