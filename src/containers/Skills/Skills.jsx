@@ -12,8 +12,6 @@ const categories = [
   "Todas",
 ];
 
-console.log(skillsData);
-
 const Skills = () => {
   const [category, setCategory] = useState("");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });

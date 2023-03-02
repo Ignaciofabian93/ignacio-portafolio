@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Button } from "../../components";
 import { BsEnvelopeFill } from "react-icons/bs";
+import { motion } from "framer-motion";
 
-const Contact = ({ setOpen }) => {
+const Contact = () => {
   const [data, setData] = useState({
     nombre: "",
     correo: "",
@@ -44,17 +45,34 @@ const Contact = ({ setOpen }) => {
 
   return (
     <div id="Contacto" className="form-container">
-      <div className="contact-title">
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="contact-title"
+      >
         <p>Envíame un</p>
         <h2>Mensaje</h2>
-      </div>
-      <div className="contact-text">
+      </motion.div>
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="contact-text"
+      >
         <p>También puedes seguirme en redes sociales</p>
-      </div>
-      <div className="envelope-icon rotate-vert-center">
+      </motion.div>
+      <motion.div
+        whileInView={{ y: [100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="envelope-icon rotate-vert-center"
+      >
         <BsEnvelopeFill size={30} />
-      </div>
-      <form className="form" onSubmit={handleSubmit}>
+      </motion.div>
+      <motion.form
+        whileInView={{ y: [100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="form"
+        onSubmit={handleSubmit}
+      >
         <input
           className="name"
           type="text"
@@ -84,7 +102,7 @@ const Contact = ({ setOpen }) => {
         <Button type={"submit"} className={"primary"}>
           Enviar
         </Button>
-      </form>
+      </motion.form>
     </div>
   );
 };
