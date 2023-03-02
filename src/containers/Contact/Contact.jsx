@@ -43,7 +43,7 @@ const Contact = ({ setOpen }) => {
   console.log(data);
 
   return (
-    <div className="form-container">
+    <div id="Contacto" className="form-container">
       <div className="contact-title">
         <p>Envíame un</p>
         <h2>Mensaje</h2>
