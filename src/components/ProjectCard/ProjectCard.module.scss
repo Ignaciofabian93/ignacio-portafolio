@@ -1,8 +1,8 @@
-.card-container {
+.cardContainer {
   min-width: 260px;
   width: 90%;
   max-width: 350px;
-  height: 320px;
+  height: 400px;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
   display: flex;
@@ -11,7 +11,7 @@
   margin: 1rem;
 }
 
-.card-title {
+.cardTitle {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -23,7 +23,7 @@
   }
 }
 
-.card-img-container {
+.cardImgContainer {
   display: flex;
   justify-content: center;
   min-width: 260px;
@@ -37,14 +37,19 @@
   }
 }
 
-.card-btns {
+.cardDescription {
+  width: 80%;
+  text-align: justify;
+}
+
+.cardBtns {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 90%;
 }
 
-.card-icons {
+.cardIcons {
   display: flex;
   align-items: center;
   justify-content: space-evenly;

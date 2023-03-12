@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import styles from "./Skills.module.scss";
+
 import { skillsData } from "./skillsData";
 
 const categories = [
   "Frontend",
   "Backend",
+  "Móvil",
   "Diseño",
   "Control de versiones",
   "Todas",
@@ -31,11 +34,11 @@ const Skills = () => {
 
   console.log(category);
   return (
-    <section id="Habilidades" className="skills-section">
+    <section id="Habilidades" className={styles.skillsSection}>
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className="skills-section-title"
+        className={styles.skillsSectionTitle}
       >
         <span>
           Mis <h2>Habilidades</h2> y <h2>conocimientos</h2>
@@ -45,7 +48,7 @@ const Skills = () => {
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className="categories-menu"
+        className={styles.categoriesMenu}
       >
         {categories.map((item, index) => (
           <span
@@ -61,7 +64,7 @@ const Skills = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="skills-container"
+        className={styles.skillsContainer}
       >
         {skillsData
           .filter((item) => (category ? item.area === category : item))
@@ -74,7 +77,7 @@ const Skills = () => {
                 ease: "easeInOut",
                 staggerChildren: 0.5,
               }}
-              className="skill-card"
+              className={styles.skillCard}
             >
               <Image src={src} alt={name} />
             </motion.div>

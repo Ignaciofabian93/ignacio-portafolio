@@ -3,23 +3,28 @@ import { AiOutlineEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const ProjectCard = ({ title, src, website, code, onClick }) => {
+import styles from "./ProjectCard.module.scss";
+
+const ProjectCard = ({ title, src, website, code, description }) => {
   return (
     <motion.div
       whileHover={{ scale: [1, 1.05] }}
       transition={{ duration: 0.3 }}
-      className="card-container"
+      className={styles.cardContainer}
     >
-      <div className="card-title">
+      <div className={styles.cardTitle}>
         <h4>{title}</h4>
       </div>
-      <div className="card-img-container">
+      <div className={styles.cardImgContainer}>
         <Image src={src} alt={title} />
       </div>
-      <div className="card-btns">
-        <div className="card-icons">
+      <div className={styles.cardDescription}>
+        <p>{description}</p>
+      </div>
+      <div className={styles.cardBtns}>
+        <div className={styles.cardIcons}>
           <a href={website} target="_blank" rel="noreferrer">
-            <AiOutlineEye size={30} />
+            {website ? <AiOutlineEye size={30} /> : null}
           </a>
           <a href={code} target="_blank" rel="noreferrer">
             <AiFillGithub size={30} />

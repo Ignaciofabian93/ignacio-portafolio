@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Button } from "../../components";
+import { Button, Modal } from "../../components";
 import { BsEnvelopeFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [open, setOpen] = useState(false);
   const [data, setData] = useState({
     nombre: "",
     correo: "",
@@ -28,7 +29,7 @@ const Contact = () => {
           correo: "",
           mensaje: "",
         });
-        // setOpen(true);
+        setOpen(true);
       }
     });
   };
@@ -79,6 +80,7 @@ const Contact = () => {
           name="nombre"
           placeholder="Ingresa nombre"
           minLength={3}
+          value={data.nombre}
           onChange={handleChange}
           required
         />
@@ -88,6 +90,7 @@ const Contact = () => {
           name="correo"
           placeholder="Ingresa correo"
           minLength={10}
+          value={data.correo}
           onChange={handleChange}
           required
         />
@@ -96,12 +99,14 @@ const Contact = () => {
           name="mensaje"
           placeholder="Escribe un mensaje"
           minLength={10}
+          value={data.mensaje}
           onChange={handleChange}
           required
         ></textarea>
         <Button type={"submit"} className={"primary"}>
           Enviar
         </Button>
+        {open ? <Modal onClick={() => setOpen(false)} /> : null}
       </motion.form>
     </div>
   );

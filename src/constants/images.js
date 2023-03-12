@@ -23,6 +23,8 @@ import website from "../assets/website.png";
 import vite from "../assets/vite.svg";
 import coding from "../assets/coding.jpeg";
 import lespaul from "../assets/lespaul.jpeg";
+import calculadora from "../assets/calculadora.png";
+import reactnative from "../assets/reactnative.png";
 
 export default {
   adobexd,
@@ -50,4 +52,6 @@ export default {
   ytclone,
   grupomalaga,
   website,
+  calculadora,
+  reactnative,
 };

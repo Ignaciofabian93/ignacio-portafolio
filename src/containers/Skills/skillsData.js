@@ -47,6 +47,11 @@ export const skillsData = [
     area: "Frontend",
   },
   {
+    name: "React Native",
+    src: images.reactnative,
+    area: "Móvil",
+  },
+  {
     name: "Material UI",
     src: images.mui,
     area: "Frontend",
